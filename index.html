@@ -8,10 +8,41 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 60px;
       background: #f7f7f7;
     }
-    h1 { color: #222; }
+
+    h1 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #444;
+    }
+
+    /* Bagian gambar preview */
+    .preview-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .preview-container img {
+      width: 200px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.25s;
+    }
+
+    .preview-container img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Tombol umum */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -26,53 +57,56 @@
       color: white;
       transition: 0.25s;
     }
+
     .btn img {
       height: 40px;
       width: 40px;
     }
+
     .btn-open {
       background-color: #22c55e;
     }
+
     .btn-open:hover {
       background-color: #16a34a;
     }
+
     .store-buttons {
       margin-top: 20px;
     }
-    .store-btn {
-      display: inline-block;
-      margin: 0 10px;
-      transition: transform 0.25s;
-    }
-    .store-btn:hover {
-      transform: scale(1.1);
-    }
+
     .btn-download {
-  background-color: #3b82f6;
-  }
-  .btn-download:hover {
-    background-color: #2563eb;
-  }
+      background-color: #3b82f6;
+    }
+
+    .btn-download:hover {
+      background-color: #2563eb;
+    }
   </style>
 </head>
 <body>
   <h1>Buka atau Unduh Nusa App</h1>
-  <p>Klik salah satu tombol di bawah:</p>
+  <p>Klik salah satu tombol di bawah untuk membuka atau mengunduh aplikasi.</p>
+
+  <!-- Bagian Preview Gambar -->
+  <div class="preview-container">
+    <img src="https://via.placeholder.com/200x400?text=Preview+1" alt="Tangkapan layar aplikasi Nusa 1">
+    <img src="https://via.placeholder.com/200x400?text=Preview+2" alt="Tangkapan layar aplikasi Nusa 2">
+  </div>
 
   <!-- Tombol Buka Aplikasi -->
   <a class="btn btn-open" href="nusameta://nusa-description?id=09df6aa7-2155-46b6-88dc-7406e8b5d3fa">
-    Buka nusa diaplikasi
+    Buka Nusa di Aplikasi
   </a>
 
   <!-- Tombol Unduh Store -->
   <div class="store-buttons">
-  <a class="btn btn-download" href="https://play.google.com/store/apps/details?id=io.nusameta.app">
-    Unduh di Play Store
-  </a>
-  <a class="btn btn-download" href="https://apps.apple.com/id/app/idXXXXXXXXX">
-    Unduh di App Store
-  </a>
-</div>
-
+    <a class="btn btn-download" href="https://play.google.com/store/apps/details?id=io.nusameta.app">
+      Unduh di Play Store
+    </a>
+    <a class="btn btn-download" href="https://apps.apple.com/id/app/idXXXXXXXXX">
+      Unduh di App Store
+    </a>
+  </div>
 </body>
 </html>
