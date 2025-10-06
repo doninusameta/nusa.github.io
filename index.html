@@ -13,7 +13,10 @@
     }
     h1 { color: #222; }
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       margin: 12px;
       padding: 14px 28px;
       border-radius: 10px;
@@ -22,6 +25,10 @@
       text-decoration: none;
       color: white;
       transition: 0.25s;
+    }
+    .btn img {
+      height: 24px;
+      width: 24px;
     }
     .btn-open {
       background-color: #22c55e;
@@ -35,13 +42,34 @@
     .btn-download:hover {
       background-color: #2563eb;
     }
+    .btn-apple {
+      background-color: #000000;
+    }
+    .btn-apple:hover {
+      background-color: #333333;
+    }
   </style>
 </head>
 <body>
   <h1>Buka atau Unduh Nusa App</h1>
   <p>Klik salah satu tombol di bawah:</p>
 
-  <a class="btn btn-open" href="nusameta://nusa-description">Buka Aplikasi</a>
-  <a class="btn btn-download" href="https://play.google.com/store/apps/details?id=io.nusameta.app">Unduh dari Play Store</a>
+  <!-- Tombol Buka Aplikasi -->
+  <a class="btn btn-open" href="nusameta://nusa-description">
+    🚀 Buka Aplikasi
+  </a>
+
+  <!-- Tombol Unduh dari Play Store -->
+  <a class="btn btn-download" href="https://play.google.com/store/apps/details?id=io.nusameta.app">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store">
+    Unduh di Play Store
+  </a>
+
+  <!-- Tombol Unduh dari App Store -->
+  <a class="btn btn-apple" href="https://apps.apple.com/id/app/idXXXXXXXXX">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store">
+    Unduh di App Store
+  </a>
+
 </body>
 </html>
