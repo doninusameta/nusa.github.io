@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buka Nusa App</title>
+
+  <script>
+    function openNusaApp() {
+      // Buka aplikasi lewat deep link
+      window.location.href = "mygame://nusa";
+
+      // Jika gagal (app tidak terinstal), arahkan ke Play Store setelah 2 detik
+      setTimeout(function() {
+        window.location.href = "https://play.google.com/store/apps/details?id=io.nusameta.app";
+      }, 2000);
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f9fafb;
+    }
+    h1 {
+      color: #333;
+    }
+    a, button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #22c55e;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a:hover, button:hover {
+      background-color: #16a34a;
+    }
+  </style>
+</head>
+
+<body onload="openNusaApp()">
+  <h1>Buka Nusa App</h1>
+  <p>Jika aplikasi tidak terbuka otomatis, klik tombol di bawah ini:</p>
+
+  <a href="mygame://nusa">Buka Nusa Sekarang</a><br>
+  <a href="https://play.google.com/store/apps/details?id=io.nusameta.app">Unduh dari Play Store</a>
+</body>
+</html>
