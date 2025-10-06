@@ -3,29 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buka Nusa App</title>
+  <title>Buka atau Unduh Nusa App</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
-    h1 { color: #333; }
-    a {
-      display: inline-block;
-      padding: 14px 26px;
-      background: #22c55e;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background: #f7f7f7;
     }
-    a:hover { background: #16a34a; }
+    h1 { color: #222; }
+    .btn {
+      display: inline-block;
+      margin: 12px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      transition: 0.25s;
+    }
+    .btn-open {
+      background-color: #22c55e;
+    }
+    .btn-open:hover {
+      background-color: #16a34a;
+    }
+    .btn-download {
+      background-color: #3b82f6;
+    }
+    .btn-download:hover {
+      background-color: #2563eb;
+    }
   </style>
 </head>
 <body>
-  <h1>Buka Aplikasi Nusa</h1>
-  <p>Tekan tombol di bawah untuk membuka aplikasi.</p>
+  <h1>Buka atau Unduh Nusa App</h1>
+  <p>Klik salah satu tombol di bawah:</p>
 
-  <a href="mygame://nusa"
-     onclick="setTimeout(() => { window.location.href='https://play.google.com/store/apps/details?id=io.nusameta.app'; }, 2000);">
-     Buka Nusa App
-  </a>
+  <a class="btn btn-open" href="mygame://nusa">Buka Aplikasi</a>
+  <a class="btn btn-download" href="https://play.google.com/store/apps/details?id=io.nusameta.app">Unduh dari Play Store</a>
 </body>
 </html>
